@@ -10,7 +10,7 @@ const logrequest = (req, res, next) => {
     next();
 }
 
-app.use(new LocalStrategy(async (USERNAME, PASSWORD, done) => {
+passport.use(new LocalStrategy(async (USERNAME, PASSWORD, done) => {
        try{
 
             console.log('Received credentials:',USERNAME,PASSWORD);
